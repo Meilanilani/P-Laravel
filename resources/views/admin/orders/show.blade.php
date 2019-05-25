@@ -1,6 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.top')
 
 @section('content')
+ <section id="hero">
+<div class="hero-container">
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="col">
@@ -42,10 +44,10 @@
 				<table id="cart" class="table table-hover table-condensed">
 					<thead>
 						<tr>
-							<th style="width:50%">Product</th>
-							<th style="width:10%">Price</th>
-							<th style="width:8%">Quantity</th>
-							<th style="width:22%" class="text-center">Subtotal</th>
+							<th style="width:50%; color: white">Product</th>
+							<th style="width:10%; color: white">Price</th>
+							<th style="width:8%; color: white">Quantity</th>
+							<th style="width:22%; color: white" class="text-center">Subtotal</th>
 						</tr>
 					</thead>
 					<tbody>

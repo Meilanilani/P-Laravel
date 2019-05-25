@@ -6,8 +6,38 @@
 
         <title>Laravel</title>
 
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+            <meta content="" name="keywords">
+            <meta content="" name="description">
+            <!-- Main Stylesheet File --> 
+            <link rel="stylesheet" type="text/css" href="{{asset('/css/style.css') }}">
+
+            <!-- Favicons -->
+            <link rel="icon" href="{{ asset('/img/favicon.png')}}" >
+            <link rel="apple-touch-icon" href="{{ asset('/img/apple-touch-icon.png')}}">
+
+            <!-- Google Fonts -->
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+            <!-- Bootstrap CSS File -->
+            <link rel="stylesheet" href="{{asset('/lib/bootstrap/css/bootstrap.min.css')}}">
+
+            <!-- Libraries CSS Files -->
+            <link rel="stylesheet" href="{{ asset('/lib/font-awesome/css/font-awesome.min.css')}}">
+            <link rel="stylesheet" href="{{asset('/lib/animate/animate.min.css')}}">
+            <!--===============================================================================================-->     
+            <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}"> 
+            
+            <script src="{{asset('/js/bootstrap.min.js')}}" ></script>
+            <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -64,34 +94,37 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+    <!--==========================Header============================-->
+            <header id="header">
+                <div class="container">
+                    <div id="logo" class="pull-left">
+                        <font face="Priscillia Script" color="White" size="7px">ByteBase.com</font>
+                    </div>
+                       <nav id="nav-menu-container">
+                            <ul class="nav-menu">
+                            @if (Route::has('login'))
+                                    @auth
+                                        <li><a href="{{ url('/home') }}">Home</a></li>
+                                    @else
+                                        <li><a href="{{ route('login') }}">Login</a></li>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                                        @if (Route::has('register'))
+                                            <li><a href="{{ route('register') }}">Register</a></li>
+                                        @endif
+                                    @endauth
+                                </li>
+                                </div>
+                            @endif
+                            </ul>
+                        </nav><!-- #nav-menu-container -->
+                    </div>
+            </header><!-- #header -->
+                <!--==========================Hero Section============================-->
+                <section id="hero">
+                    <div class="hero-container">
+                        <br/>
+                            <a href="{{ route('products.index')}}" class="btn btn-lg btn-primary">Klik Disini Untuk Melihat Produk</a>
+                                <ul class="nav-menu">
                 </div>
             </div>
         </div>

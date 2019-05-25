@@ -1,6 +1,8 @@
-@extends ('layouts.app')
+@extends ('layouts.top')
 
 @section('content')
+ <section id="hero">
+<div class="hero-container">
 <div class="container">
     <div class="row">
         <div class="col-md-12">

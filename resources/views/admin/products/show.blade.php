@@ -1,10 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.top')
 
 @section('content')
+ <section id="hero">
+<div class="hero-container">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col">
             <h2>Hasil Product</h2>
+            <hr>
             <br/>
             <div class="table-responsive">
                 <table class="table table-hover table-sm">

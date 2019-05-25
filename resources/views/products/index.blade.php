@@ -1,6 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.top')
 
 @section('content')
+ <section id="hero">
+<div class="hero-container">
 <div class="container">
     <div class="row mt-4">
         <div class="col-md-4 offset-md-8">
@@ -23,9 +25,9 @@
             <div class="row mt-4">
         @endif
         
-        <div class="col">
+        <div class="col-md-3">
             <div class="card"> 
-                <img src="{{ asset('image_files/'.$product->image_url) }}" class="card-img-top" alt="...">
+                <img src="{{ asset('image_files/'.$product->image_url) }}" class="card-img-top" alt="..." width="150px" height="150px">
                 <div class="card-body">
                     <h5 class="card-title">
                         <a href="{{ route('products.show', ['id' => $product->id]) }}">
